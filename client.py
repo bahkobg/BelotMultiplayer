@@ -1,4 +1,5 @@
 import pygame as pg
+from network import Network
 
 WIDTH = 800
 HEIGHT = 800
@@ -34,6 +35,8 @@ class Player:
 
 
 def main():
+    n = Network()
+    start_pos = n.getPos()
     p1 = Player(50, 50, 100, 100, (0, 255, 0))
     running = True
     while running:
